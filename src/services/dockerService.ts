@@ -42,8 +42,8 @@ export const executeCode = async (code: string, language: string): Promise<Execu
     case 'java':
       fileName = 'Main.java';
       imageName = 'openjdk:17-slim';
-      compileCmd = ['javac', '/app/Main.java'];
-      runCmd = ['java', '-cp', '/app', 'Main'];
+      compileCmd = ['echo', 'Initiating Java Single-File Execution...'];
+      runCmd = ['java', '/app/Main.java'];
       break;
     default:
       throw new Error('Unsupported execution language');
